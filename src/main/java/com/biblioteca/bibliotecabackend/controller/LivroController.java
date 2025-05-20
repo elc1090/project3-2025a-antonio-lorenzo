@@ -6,6 +6,7 @@ import com.biblioteca.bibliotecabackend.service.LivroService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/livros")
 public class LivroController {
