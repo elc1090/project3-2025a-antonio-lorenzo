@@ -24,7 +24,7 @@ public class Usuario {
     private String dataNascimento;
 
     @Column(unique = true)
-    private String cpf;  // Cadastro de pessoa física - único
+    private String cpf;
 
     private String telefone;
 }
