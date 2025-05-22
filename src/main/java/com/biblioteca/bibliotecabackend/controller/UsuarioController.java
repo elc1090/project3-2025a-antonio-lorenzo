@@ -1,7 +1,10 @@
 package com.biblioteca.bibliotecabackend.controller;
 
+import com.biblioteca.bibliotecabackend.dto.LoginDTO;
 import com.biblioteca.bibliotecabackend.model.Usuario;
 import com.biblioteca.bibliotecabackend.service.UsuarioService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,6 +32,16 @@ public class UsuarioController {
     @GetMapping("/{id}")
     public Usuario buscarPorId(@PathVariable Long id) {
         return usuarioService.buscarPorId(id);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody LoginDTO loginDTO) {
+        try {
+            Usuario usuario = usuarioService.verificarCredenciais(loginDTO.getCpf(), loginDTO.getSenha());
+            return ResponseEntity.ok(usuario);
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
+        }
     }
 
 }

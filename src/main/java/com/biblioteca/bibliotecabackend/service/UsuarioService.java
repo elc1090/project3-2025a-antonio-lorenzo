@@ -27,4 +27,15 @@ public class UsuarioService {
         return usuarioRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado com o ID: " + id));
     }
+
+    public Usuario verificarCredenciais(String cpf, String senha) {
+        Usuario usuario = usuarioRepository.findByCpfContainingIgnoreCase(cpf)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+
+        if (!usuario.getSenha().equals(senha)) {
+            throw new RuntimeException("Senha incorreta");
+        }
+
+        return usuario;
+    }
 }
