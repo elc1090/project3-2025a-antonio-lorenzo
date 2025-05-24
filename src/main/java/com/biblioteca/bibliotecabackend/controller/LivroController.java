@@ -2,6 +2,7 @@ package com.biblioteca.bibliotecabackend.controller;
 
 import com.biblioteca.bibliotecabackend.model.Livro;
 import com.biblioteca.bibliotecabackend.service.LivroService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +26,16 @@ public class LivroController {
     @PostMapping
     public Livro criar(@RequestBody Livro livro) {
         return livroService.criar(livro);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Livro> atualizar(@PathVariable Long id, @RequestBody Livro livroAtualizado) {
+        try {
+            Livro livro = livroService.atualizar(id, livroAtualizado);
+            return ResponseEntity.ok(livro);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping("/{id}")

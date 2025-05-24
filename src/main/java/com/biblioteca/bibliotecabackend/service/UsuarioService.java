@@ -23,6 +23,17 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
+    public Usuario atualizar(Long id, Usuario usuarioAtualizado) {
+
+        Usuario usuarioExistente = usuarioRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado com o id: " + id));
+
+        usuarioExistente.setNome(usuarioAtualizado.getNome());
+        usuarioExistente.setEmail(usuarioAtualizado.getEmail());
+
+        return usuarioRepository.save(usuarioExistente);
+    }
+
     public Usuario buscarPorId(Long id) {
         return usuarioRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado com o ID: " + id));
