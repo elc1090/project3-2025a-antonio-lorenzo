@@ -23,6 +23,17 @@ public class LivroService {
         return livroRepository.save(livro);
     }
 
+    public Livro atualizar(Long id, Livro livroAtualizado) {
+        Livro livroExistente = livroRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Livro não encontrado com o id: " + id));
+
+        livroExistente.setTitulo(livroAtualizado.getTitulo());
+        livroExistente.setAutor(livroAtualizado.getAutor());
+        livroExistente.setAnoPublicacao(livroAtualizado.getAnoPublicacao());
+
+        return livroRepository.save(livroExistente);
+    }
+
     public void deletar(Long id) {
         livroRepository.deleteById(id);
     }

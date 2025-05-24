@@ -29,6 +29,16 @@ public class UsuarioController {
         return usuarioService.criar(usuario);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Usuario> atualizarUsuario(@PathVariable Long id, @RequestBody Usuario usuarioAtualizado) {
+        try {
+            Usuario usuario = usuarioService.atualizar(id, usuarioAtualizado);
+            return ResponseEntity.ok(usuario);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @GetMapping("/{id}")
     public Usuario buscarPorId(@PathVariable Long id) {
         return usuarioService.buscarPorId(id);
