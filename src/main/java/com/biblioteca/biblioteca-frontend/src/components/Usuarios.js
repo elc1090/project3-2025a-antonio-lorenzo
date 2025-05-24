@@ -6,7 +6,7 @@ const Usuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/usuarios')
+    axios.get('https://biblioteca-backend-mk0j.onrender.com/usuarios')
       .then(response => setUsuarios(response.data))
       .catch(error => console.error('Erro ao buscar usuários:', error));
   }, []);
