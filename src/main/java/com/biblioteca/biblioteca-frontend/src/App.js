@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import LivroList from './components/LivroList';
-import UsuarioList from './components/Usuarios'; // 👈 adicione isso
+import UsuarioList from './components/Usuarios';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/livros" element={<LivroList />} />
-        <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/usuarios" element={<UsuarioList />} />
       </Routes>
     </Router>
   );
