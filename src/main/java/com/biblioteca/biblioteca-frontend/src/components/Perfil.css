@@ -1,0 +1,59 @@
+.perfil-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f7f9fc;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.perfil-box {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.perfil-box p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.perfil-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.logout-button,
+.delete-button {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-button {
+  background-color: #0077cc;
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: #005fa3;
+}
+
+.delete-button {
+  background-color: #e53935;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c62828;
+}
+
+.mensagem {
+  margin-top: 20px;
+  font-weight: bold;
+}

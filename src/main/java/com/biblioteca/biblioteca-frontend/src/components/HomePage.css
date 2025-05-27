@@ -1,0 +1,98 @@
+/* Reset básico */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container da página inicial */
+.homepage-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #6eb1ff, #4183d7);
+  color: white;
+  position: relative;
+}
+
+/* Caixa central */
+.homepage-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Título e subtítulo */
+.homepage-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.homepage-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Botões centrais */
+.homepage-buttons button {
+  background-color: white;
+  color: #0077cc;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px;
+  margin: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.homepage-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+
+.top-right-buttons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+
+.top-right-buttons .login-button,
+.top-right-buttons .cadastro-button {
+  background-color: white;
+  color: #0077cc;
+  font-weight: bold;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.top-right-buttons .login-button:hover,
+.top-right-buttons .cadastro-button:hover {
+  background-color: #e0e0e0;
+}
+
+.perfil-button, .logout-button {
+  background-color: white;
+  color: #0077cc;
+  font-weight: bold;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.perfil-button:hover, .logout-button:hover {
+  background-color: #e0e0e0;
+}
+

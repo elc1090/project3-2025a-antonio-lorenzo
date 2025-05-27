@@ -42,7 +42,7 @@ input {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #007bff;
   color: white;
   padding: 10px 16px;
   border: none;
@@ -61,7 +61,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #1e8afd;
 }
 
 .botoes {
@@ -78,11 +78,19 @@ button:hover {
 }
 
 .btn.editar {
-  background-color: #4CAF50;
+  background-color: #007bff;
+}
+
+.btn.editar:hover {
+  background-color: #1e8afd;
 }
 
 .btn.excluir {
   background-color: #f44336;
+}
+
+.btn.excluir:hover {
+  background-color: #ff4f4f;
 }
 
 .edit-form input {
