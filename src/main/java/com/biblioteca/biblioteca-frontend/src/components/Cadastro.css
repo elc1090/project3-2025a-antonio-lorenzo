@@ -1,0 +1,41 @@
+.cadastro-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.cadastro-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cadastro-button:hover {
+  background-color: #0056b3;
+}
+
+.mensagem {
+  margin-top: 15px;
+  font-weight: bold;
+}
