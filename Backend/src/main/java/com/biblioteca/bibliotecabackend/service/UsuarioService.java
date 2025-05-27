@@ -19,6 +19,10 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
+    public void deletar(Long id) {
+        usuarioRepository.deleteById(id);
+    }
+
     public Usuario criar(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
