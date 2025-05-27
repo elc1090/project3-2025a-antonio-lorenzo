@@ -10,7 +10,7 @@
 
  #### Desenvolvedores
  
- Antônio Amadeu Dall'Agnol Rohr
+ Antônio Amadeu Dall'Agnol Rohr e
  Lorenzo Sacchet Taschetto
  
  #### Ambiente de desenvolvimento
