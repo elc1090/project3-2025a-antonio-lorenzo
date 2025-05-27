@@ -23,7 +23,7 @@
  
  O desenvolvimento deste projeto foi muito interessante e desafiador para ambos, envolvendo colaboração em dupla e momentos de trabalho individual. Cada etapa trouxe aprendizados valiosos, desde o desenvolvimento até o deploy individual do backend, frontend e database.
 
- ### Desafios Técnicos:
+ #### Desafios Técnicos:
 
  O deploy individual de cada etapa exigiu bastante esforço, desde a criação do Dockerfile para hospedar o backend até a configuração do Cross-Origin.
  
