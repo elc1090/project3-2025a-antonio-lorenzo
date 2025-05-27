@@ -30,6 +30,10 @@ public class LivroService {
         livroExistente.setTitulo(livroAtualizado.getTitulo());
         livroExistente.setAutor(livroAtualizado.getAutor());
         livroExistente.setAnoPublicacao(livroAtualizado.getAnoPublicacao());
+        livroExistente.setIsbn(livroAtualizado.getIsbn());
+        livroExistente.setQuantidade(livroAtualizado.getQuantidade());
+
+
 
         return livroRepository.save(livroExistente);
     }
